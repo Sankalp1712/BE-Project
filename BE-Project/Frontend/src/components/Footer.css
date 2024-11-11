@@ -1,0 +1,10 @@
+/* Footer Styling */
+footer {
+  background-color: #333; /* Dark background */
+  color: white; /* White text */
+  padding: 20px;
+  text-align: center;
+  box-sizing: border-box; /* Ensure padding doesn’t affect width */
+  width: 100%;
+  margin-top: auto; /* Push footer down if content is tall */
+}

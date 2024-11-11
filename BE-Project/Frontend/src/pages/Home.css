@@ -1,0 +1,175 @@
+/* Main container for the home section */
+.home-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+/* Hero Section Styling */
+.hero-section {
+    height: 50vh;
+    background: url('https://www.epo.org/sites/default/files/styles/ratio_16_9/public/2023-05/AdobeStock_266056885_new_1920x1080.jpg?itok=o1GLBuEj') no-repeat center center/cover;
+    background-size: cover;
+    background-position: center center;
+    display: flex;
+    /* justify-content: center;
+    align-items: center; */
+    
+    color: black;
+    padding: 20px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.hero-section .overlay {
+    /* text-align: center; */
+
+    color: white;
+    padding: 20px;
+}
+
+.hero-section h2 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.hero-section p {
+    font-size: 1.25em;
+}
+
+.hero-button{
+    text-decoration:none;
+    text-align:center;
+    background-color:white;
+    border-radius:10px;
+    display:inline-block;
+    padding:8px ;
+    
+
+}
+.hero-button .btn-text{
+    color: #008080;
+    font-weight: 300;
+    letter-spacing: 0.1em;
+    animation:fadeInOut 1s infinite;
+
+}
+/* Content Section (Second Section) */
+.hero-button:hover {
+    background-color: #008080;
+    
+
+}
+.hero-button:hover .btn-text{
+    color:white; 
+    animation: none;
+}
+.content-section {
+    height: auto; /* Height adjusts based on content */
+    padding: 40px 20px;
+    text-align: center;
+    color: black;
+    overflow-y: auto;
+    
+}
+
+/* Content Section Headings */
+.content-text{
+    width:70%;
+    margin:0 auto;
+}
+.content-text h1 {
+    font-size: 2.5em;
+    font-weight: 700;
+    margin-bottom: 5px;
+    color: #008080;
+   
+}
+.content-text p{
+    color:rgb(62, 62, 62);
+    text-align: left;
+}
+.content-section h5 {
+    font-size: 1.5em;
+    font-weight: 400;
+    margin-bottom: 10px;
+    color: black;
+}
+
+/* Grid layout for images */
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns on larger screens */
+    gap: 20px;
+    max-width: 700px;
+    margin: 0 auto;
+    padding-bottom: 2px;
+}
+
+.grid-image {
+    width: 100%; /* Ensure image takes up full width */
+    height: auto;
+    object-fit: cover;
+    /* border-radius: 8px; */
+}
+
+/* Text styling for fake and original */
+.fake {
+    color: red;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.original {
+    color: green;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+/* Media Query for smaller screens */
+@media (max-width: 768px) {
+    /* On small screens, sections will stack vertically */
+    .hero-section {
+        height: 40vh; /* Slightly taller hero section on small screens */
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        
+    }
+    .hero-section .overlay{
+        text-align: center;
+       
+    }
+    .hero-section h2{
+        font-size:1.75em;
+    }
+    .hero-section p{
+        font-size:1em;
+    }
+
+    .content-section {
+        padding: 30px 15px; /* Adjust padding for small screens */
+    }
+
+    .content-section h1 {
+        font-size: 2em; /* Smaller font size on small screens */
+    }
+
+    .content-section h5 {
+        font-size: 1.2em; /* Smaller font size on small screens */
+    }
+
+    /* Stack the images in a single column for smaller screens */
+    .image-grid {
+        grid-template-columns: 1fr; /* Single column layout on small screens */
+    }
+
+}
+@keyframes fadeInOut{
+    0%,100%{
+        opacity:1;
+    }
+    50%{
+        opacity:0;
+    }
+}

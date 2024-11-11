@@ -1,0 +1,90 @@
+/* Styling for the header */
+.header {
+    background-color: #f9f9f9;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    width: 100%;
+    box-sizing: border-box;
+    padding-left: 50px;
+    padding-right: 50px; /* Reduced padding on larger screens for better spacing */
+}
+
+.header h1 {
+    font-size: 2.0em;
+    font-weight: 600;
+    color:#008080;
+    margin: 0;
+}
+
+.header nav {
+    display: flex;
+    gap: 50px; /* Reduced gap between links for better proportion */
+    align-items: center; /* Ensure that nav links are vertically centered */
+}
+
+/* Styling for the nav links */
+.home, .detect {
+    font-size: 1.25em;
+    font-weight: 500;
+    text-decoration: none;
+    color: red;
+    transition: color 0.3s ease, border-bottom 0.3s ease; /* Smooth transition for both color and underline */
+}
+
+/* Nav links default color */
+.header nav a {
+    color: #008080;
+    text-decoration: none;
+}
+
+/* On hover, change the color to white */
+.header nav a:hover {
+    
+    border-bottom: 3px solid rgb(153, 152, 152);
+}
+
+/* Ensures paragraph tags inside nav don’t inherit unwanted styles */
+.header nav p {
+    margin: 0;
+    color: inherit;
+}
+
+/* Media Query for tablets and smaller screens */
+@media (max-width: 1024px) {
+    .header {
+        padding: 20px 30px; /* Adjusted padding for medium-sized screens */
+    }
+
+    .header nav {
+        gap: 30px; /* Reduce gap for smaller screens */
+    }
+
+    .home, .detect {
+        font-size: 1.2em; /* Slightly smaller font on medium screens */
+    }
+}
+
+/* Media Query for smaller screens (max-width: 768px) */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column; /* Stack header elements vertically on smaller screens */
+        align-items: center;
+        padding: 15px 20px; /* Adjusted padding for smaller screens */
+    }
+
+    .header h1 {
+        font-size: 2em; /* Reduce font size for smaller screens */
+    }
+
+    .header nav {
+        flex-direction: column;
+        gap: 20px; /* Space out the links a bit more */
+        margin-top: 15px;
+    }
+
+    .home, .detect {
+        font-size: 1.1em; /* Smaller font size for mobile screens */
+    }
+}

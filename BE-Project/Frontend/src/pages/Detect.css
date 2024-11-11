@@ -1,0 +1,77 @@
+.detect-page{
+    width:80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.detect-banner{
+    
+  margin-top:40px;
+  display:flex;
+  justify-content:space-between;
+  align-items: center;
+}
+
+.detect-heading h1{
+    color:#008080;
+    font-size:2.5em;
+}
+.detect-file-details p{
+    color:#007928;
+    font-size:1.2em; 
+}
+.detect-upload-button button{
+    background-color: #008080;
+}
+.detect-upload-button button:hover{
+    opacity:80%;
+}
+.detect-button{
+    background-color:#008080;
+    padding:0.3em;
+    font-size:1em;
+    width:5.5em;
+    
+}
+.detect-button:hover{
+    opacity:80%;
+}
+.detect-result{
+    margin-top:50px;
+}
+.detect-result h1{
+    color:#008080;
+    font-size:1.5em;
+    font-weight:600;
+    
+}
+
+.detect-real{
+    margin-left:10px;
+    color:#007928;
+
+}
+.detect-fake{
+    color:rgb(210, 0, 0);
+}
+.detect-confidance{
+    margin-left:10px;
+    color:gray;
+}
+@media (max-width:768px){
+    .detect-banner{
+        flex-direction:column;
+        justify-content:center;
+        align-items: center;
+    }
+    .detect-banner h1{
+        text-align:center;
+    }
+    .detect-file-details,.detect-result{
+        display:flex;
+        flex-direction:column;
+       justify-content: center;
+       align-items: center;
+    }
+    
+}
